@@ -20,23 +20,23 @@ public class Main {
 
         for (int qtd = 1; qtd <= 5; qtd++) {
                 String nome = JOptionPane.showInputDialog("Qual o nome do aluno " + qtd + "? ");
-                /*String matricula = JOptionPane.showInputDialog("Digite a matrícula: ");
+                String matricula = JOptionPane.showInputDialog("Digite a matrícula: ");
                 String idade = JOptionPane.showInputDialog("Qual a idade? ");
                 String serie = JOptionPane.showInputDialog("Qual a serie?");
                 String dataDeNascimento = JOptionPane.showInputDialog("Qual a data de nascimento? ");
                 String turmaAluno = JOptionPane.showInputDialog("Qual a turma? ");
                 String nomeDoPai = JOptionPane.showInputDialog("Nome do pai? ");
-                String nomeDaMae = JOptionPane.showInputDialog("Nome da mãe? ");*/
+                String nomeDaMae = JOptionPane.showInputDialog("Nome da mãe? ");
                 
                 Aluno aluno1 = new Aluno();
                 aluno1.setNome(nome);
-                /*aluno1.setMatricula(matricula);
+                aluno1.setMatricula(matricula);
                 aluno1.setIdade(Integer.valueOf(idade));
                 aluno1.setSerie(serie);
                 aluno1.setDataNascimento(dataDeNascimento);
                 aluno1.setTurma(turmaAluno);
                 aluno1.setNomePai(nomeDoPai);
-                aluno1.setNomeMae(nomeDaMae);*/
+                aluno1.setNomeMae(nomeDaMae);
 
                 //Adicionar disciplinas do aluno
                 for (int pos = 1; pos <= 1; pos++) {
