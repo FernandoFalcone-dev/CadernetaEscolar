@@ -146,7 +146,7 @@ public class Aluno {
         return somaNotas / disciplinas.size();
     }
 
-    public String alunoAprovado() {
+    public String verificaAprovacao() {
         double media = this.calcularMedia();
         if (media >= 50) {
             if (media >= 70) {
