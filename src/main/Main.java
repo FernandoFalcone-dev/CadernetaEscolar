@@ -91,6 +91,7 @@ public class Main {
             }
         }
 
+        //Imprime listas
         System.out.println("----------------Lista de Aprovados----------------");
         for (Aluno aluno : alunosAprovados) {
             System.out.println("Nome: " + aluno.getNome() + " Media: " + aluno.calcularMedia() + " Status: " + aluno.verificaAprovacao());
