@@ -9,6 +9,7 @@ import javax.swing.JOptionPane;
 import classes.Aluno;
 import classes.Disciplina;
 import classes.Login;
+import classes.Pessoa;
 import constantes.StatusAluno;
 
 public class Main {
@@ -28,23 +29,27 @@ public class Main {
 
             for (int qtd = 1; qtd <= 3; qtd++) {
                     String nome = JOptionPane.showInputDialog("Qual o nome do aluno " + qtd + "? ");
+                    String cpf = JOptionPane.showInputDialog("Número do cpf: ");
+                    String rg = JOptionPane.showInputDialog("Número do rg: ");
                     String matricula = JOptionPane.showInputDialog("Digite a matrícula: ");
                     String idade = JOptionPane.showInputDialog("Qual a idade? ");
                     String serie = JOptionPane.showInputDialog("Qual a serie?");
                     String dataDeNascimento = JOptionPane.showInputDialog("Qual a data de nascimento? ");
                     String turmaAluno = JOptionPane.showInputDialog("Qual a turma? ");
-                    String nomeDoPai = JOptionPane.showInputDialog("Nome do pai? ");
-                    String nomeDaMae = JOptionPane.showInputDialog("Nome da mãe? ");
                     
                     Aluno aluno1 = new Aluno();
-                    aluno1.setNome(nome);
+                    Pessoa pessoa1 = new Pessoa();
+                    pessoa1.setNome(nome);
+                    pessoa1.setIdade(Integer.valueOf(idade));
+                    pessoa1.setDataNascimento(dataDeNascimento);
+                    pessoa1.setCpf(Long.valueOf(cpf));
+                    pessoa1.setRegistroGeral(Long.valueOf(rg));
+                    
                     aluno1.setMatricula(matricula);
-                    aluno1.setIdade(Integer.valueOf(idade));
                     aluno1.setSerie(serie);
-                    aluno1.setDataNascimento(dataDeNascimento);
                     aluno1.setTurma(turmaAluno);
-                    aluno1.setNomePai(nomeDoPai);
-                    aluno1.setNomeMae(nomeDaMae);
+                    aluno1.setPessoa(pessoa1);
+                    
 
                     //Adiciona disciplinas do aluno
                     for (int pos = 1; pos <= 3; pos++) {
@@ -80,7 +85,7 @@ public class Main {
             for (int pos = 0; pos < alunos.size(); pos++) {
                 Aluno aluno = alunos.get(pos);
                 
-                System.out.println("Aluno: " + aluno.getNome());
+                System.out.println("Aluno: " + aluno.getPessoa().getNome());
                 System.out.println("Média do aluno: " + aluno.calcularMedia());
                 System.out.println("Resultado: " + aluno.verificaAprovacao());      
 
@@ -107,17 +112,17 @@ public class Main {
             //Imprime listas
             System.out.println("----------------Lista de Aprovados----------------");
             for (Aluno aluno : maps.get(StatusAluno.APROVADO)) {
-                System.out.println("Nome: " + aluno.getNome() + " Media: " + aluno.calcularMedia() + " Status: " + aluno.verificaAprovacao());
+                System.out.println("Nome: " + aluno.getPessoa().getNome() + " Media: " + aluno.calcularMedia() + " Status: " + aluno.verificaAprovacao());
             }
 
             System.out.println("----------------Lista em Recuperação----------------");
             for (Aluno aluno : maps.get(StatusAluno.RECUPERACAO)) {
-                System.out.println("Nome: " + aluno.getNome() + " Media: " + aluno.calcularMedia() + " Status: " + aluno.verificaAprovacao());
+                System.out.println("Nome: " + aluno.getPessoa().getNome() + " Media: " + aluno.calcularMedia() + " Status: " + aluno.verificaAprovacao());
             }
 
             System.out.println("----------------Lista de Reprovados----------------");
             for (Aluno aluno : maps.get(StatusAluno.REPROVADO)) {
-                System.out.println("Nome: " + aluno.getNome() + " Media: " + aluno.calcularMedia() + " Status: " + aluno.verificaAprovacao());
+                System.out.println("Nome: " + aluno.getPessoa().getNome() + " Media: " + aluno.calcularMedia() + " Status: " + aluno.verificaAprovacao());
             }
         }
     }
