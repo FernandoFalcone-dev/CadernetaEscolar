@@ -10,4 +10,4 @@
 - Adicionar disciplinas do aluno
 - Remover disciplinas
 - Obter media e resultado final
-- Printa lista de alunos Aprovados, em Recuperação e Reprovados
+- Printa lista de alunos *Aprovados*, em *Recuperação* e *Reprovados*
