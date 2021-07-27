@@ -1,9 +1,10 @@
 # Caderneta Escolar
 
-☕ [PT-BR] Código fonte de um projeto de **caderneta escolar** feito no VScode com Java. Utiliza conceitos de POO e o pacote javax.swing para trazer mais dinamicidade.
+☕ [PT-BR] Código fonte de um projeto de **caderneta escolar** feito em Java no VScode. Utiliza conceitos de POO e o pacote javax.swing para trazer mais dinamicidade.
 
 ### Funcionalidades
 
+- Valida Login e Senha de acesso
 - Adicionar aluno
 - Cadastrar dados do aluno
 - Adicionar disciplinas do aluno
