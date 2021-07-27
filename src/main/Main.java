@@ -28,25 +28,25 @@ public class Main {
 
             for (int qtd = 1; qtd <= 3; qtd++) {
                     String nome = JOptionPane.showInputDialog("Qual o nome do aluno " + qtd + "? ");
-    /*                 String matricula = JOptionPane.showInputDialog("Digite a matrícula: ");
+                    String matricula = JOptionPane.showInputDialog("Digite a matrícula: ");
                     String idade = JOptionPane.showInputDialog("Qual a idade? ");
                     String serie = JOptionPane.showInputDialog("Qual a serie?");
                     String dataDeNascimento = JOptionPane.showInputDialog("Qual a data de nascimento? ");
                     String turmaAluno = JOptionPane.showInputDialog("Qual a turma? ");
                     String nomeDoPai = JOptionPane.showInputDialog("Nome do pai? ");
-                    String nomeDaMae = JOptionPane.showInputDialog("Nome da mãe? "); */
+                    String nomeDaMae = JOptionPane.showInputDialog("Nome da mãe? ");
                     
                     Aluno aluno1 = new Aluno();
                     aluno1.setNome(nome);
-    /*                aluno1.setMatricula(matricula);
+                    aluno1.setMatricula(matricula);
                     aluno1.setIdade(Integer.valueOf(idade));
                     aluno1.setSerie(serie);
                     aluno1.setDataNascimento(dataDeNascimento);
                     aluno1.setTurma(turmaAluno);
                     aluno1.setNomePai(nomeDoPai);
-                    aluno1.setNomeMae(nomeDaMae); */
+                    aluno1.setNomeMae(nomeDaMae);
 
-                    //Adicionar disciplinas do aluno
+                    //Adiciona disciplinas do aluno
                     for (int pos = 1; pos <= 3; pos++) {
                         String nomeDisciplina = JOptionPane.showInputDialog("Nome da disciplina " + pos + " ?");
                         String notaDisciplina = JOptionPane.showInputDialog("Nota da disciplina " + pos + " ?");
@@ -58,7 +58,7 @@ public class Main {
                         aluno1.getDisciplinas().add(disciplina);
                     }
 
-                    //Remover disciplinas
+                    //Remove disciplinas
                     int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina?");
 
                     while (escolha == 0) {
@@ -76,7 +76,7 @@ public class Main {
             maps.put(StatusAluno.RECUPERACAO, new ArrayList<Aluno>());
             maps.put(StatusAluno.REPROVADO, new ArrayList<Aluno>());
 
-            //Obter media e resultado
+            //Obtem media e resultado
             for (int pos = 0; pos < alunos.size(); pos++) {
                 Aluno aluno = alunos.get(pos);
                 
